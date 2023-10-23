@@ -1,8 +1,10 @@
 # Netflix
 
-1. Create  React app with typescript
-2. Configured Tailwind CSS
-
+1. Create React app with typescript
+2. Configured Sass
+3. Header
+4. Login form
+5. Signup form
 
 # Features
 
@@ -15,6 +17,6 @@
         - Trailer in background
         - Title and description
         - Movie suggestion
-            - Movie list * N
+            - Movie list \* N
 3. Search bar
     - Movie suggestion
