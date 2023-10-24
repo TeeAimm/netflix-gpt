@@ -8,4 +8,7 @@ const appStore = configureStore({
     },
 });
 
+// Infer the `RootState` and `AppDispatch` types from the store itself
+export type RootState = ReturnType<typeof appStore.getState>;
+
 export default appStore;

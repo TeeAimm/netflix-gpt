@@ -13,6 +13,9 @@
 11. Create a sign up user account in Firebase
 12. Implement Sign in user API
 13. Redux store set up with UserSlice
+14. Implement Sign out
+15. Update profile with name and image
+16. Fetch from TMDB Movies
 
 # Features
 

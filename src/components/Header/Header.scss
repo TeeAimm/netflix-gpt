@@ -1,3 +1,15 @@
+.header__body__loggedin {
+    padding: 7px 60px;
+    background: rgb(20, 20, 20);
+    &__img {
+        width: 130px;
+    }
+    &__profile__icon {
+        height: 32px;
+        width: 32px;
+        border-radius: 4px;
+    }
+}
 .header__body {
     &__img {
         width: 240px;
