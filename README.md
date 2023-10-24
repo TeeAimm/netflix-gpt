@@ -16,6 +16,8 @@
 14. Implement Sign out
 15. Update profile with name and image
 16. Fetch from TMDB Movies
+17. Unsubscribe to firebase onAuthStateChanged callback/event
+18. Add hardcoded values to constant file
 
 # Features
 

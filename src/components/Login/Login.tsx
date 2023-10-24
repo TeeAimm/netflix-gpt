@@ -8,9 +8,10 @@ import { checkValidData } from 'utils/validate'
 import { auth } from '../../utils/firebase'
 import { useDispatch } from 'react-redux';
 import { addUser } from 'store/userSlice';
+import { profilePhoto } from 'utils/constants';
 
 const Login = () => {
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
     const dispatch = useDispatch()
     const [isSigninForm, setIsSigninForm] = useState<boolean>(true)
     const [errorMsg, setErrorMsg] = useState<string | null>(null)
@@ -24,11 +25,11 @@ const Login = () => {
 
     const handleUpdateProfile = (user: any) => {
         updateProfile(user, {
-            displayName: fullName?.current?.value, photoURL: "https://avatars.githubusercontent.com/u/26965110?v=4"
+            displayName: fullName?.current?.value, photoURL: profilePhoto
         }).then(() => {
             const { uid, email, displayName, photoURL } = { ...auth.currentUser };
             dispatch(addUser({ uid, email, displayName, photoURL }))
-            navigate('/browse')
+            //  navigate('/browse')
         }).catch((error) => {
             setErrorMsg(error.message);
         });
