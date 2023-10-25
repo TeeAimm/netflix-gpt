@@ -18,6 +18,9 @@
 16. Fetch from TMDB Movies
 17. Unsubscribe to firebase onAuthStateChanged callback/event
 18. Add hardcoded values to constant file
+19. Axios set up
+20. Register in TMDB API, create an app, get access token
+21. Get data from TMDB now playing movie list API
 
 # Features
 
