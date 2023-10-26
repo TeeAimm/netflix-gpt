@@ -13,7 +13,6 @@ const useNowPlayingMovies = () => {
                 API_OPTIONS
             );
             dispatch(addNowPlayingMovies(res.data.results));
-            console.log("axios data - ", res.data.results);
         } catch (error) {
             console.error("error :: ", error);
         }
