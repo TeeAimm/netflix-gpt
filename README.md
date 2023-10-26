@@ -21,6 +21,15 @@
 19. Axios set up
 20. Register in TMDB API, create an app, get access token
 21. Get data from TMDB now playing movie list API
+22. custom hook for now playing movies
+23. Create movie slice
+24. Update store
+25. Planning for trailer and movielist container
+26. Fetch Trailer data video
+27. Update store with trailer data
+28. Embed YT video and make it autoplay and mute
+29. Style update like Netflix
+30. Build Movie List
 
 # Features
 

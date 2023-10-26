@@ -9,9 +9,9 @@ type props = {
 
 const VideoTitle = ({ title, overview }: props) => {
     return (
-        <div>
-            <div>{title}</div>
-            <div>{overview}</div>
+        <div className='trailer__info'>
+            <div className='trailer__info__title'>{title}</div>
+            <div className='trailer__info__desc'>{overview}</div>
         </div>
     )
 }
