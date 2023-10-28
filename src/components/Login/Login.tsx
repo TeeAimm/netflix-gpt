@@ -37,7 +37,6 @@ const Login = () => {
 
     const handleBtnClick = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        // console.log(email, password)
         if (email?.current?.value && password?.current?.value) {
             const message = checkValidData(email?.current?.value, password?.current?.value)
             setErrorMsg(message);

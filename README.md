@@ -29,7 +29,10 @@
 27. Update store with trailer data
 28. Embed YT video and make it autoplay and mute
 29. Style update like Netflix
-30. Build Movie List
+30. Build Secondary component
+31. Build Movie list and movie card
+32. Use TMDB img url
+33. Create custom hook for popular, top rated and upcoming movies
 
 # Features
 

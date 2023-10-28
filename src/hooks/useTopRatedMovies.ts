@@ -1,26 +1,26 @@
 import React, { useEffect } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
-import { addNowPlayingMovies } from "store/movieSlice";
+import { addNowPlayingMovies, addTopRatedMovies } from "store/movieSlice";
 import { API_OPTIONS } from "utils/constants";
 
-const useNowPlayingMovies = () => {
+const useTopRatedMovies = () => {
     const dispatch = useDispatch();
-    const getNowPlayingMovies = async () => {
+    const getTopRatedMovies = async () => {
         try {
             const res = await axios.get(
-                "https://api.themoviedb.org/3/movie/now_playing?&page=1",
+                "https://api.themoviedb.org/3/movie/top_rated?&page=1",
                 API_OPTIONS
             );
 
-            dispatch(addNowPlayingMovies(res.data.results));
+            dispatch(addTopRatedMovies(res.data.results));
         } catch (error) {
             console.error("error :: ", error);
         }
     };
     useEffect(() => {
-        getNowPlayingMovies();
+        getTopRatedMovies();
     }, []);
 };
 
-export default useNowPlayingMovies;
+export default useTopRatedMovies;

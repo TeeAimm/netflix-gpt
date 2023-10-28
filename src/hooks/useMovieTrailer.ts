@@ -20,10 +20,8 @@ export const useMovieTrailer = (movieId: number) => {
                 ? pickAnyFromArray(trailers)
                 : res?.data?.results[0];
             dispatch(addTrailerVideo(trailer));
-
-            console.log("videos - ", trailer);
         } catch (error) {
-            console.log("error:", error);
+            console.error("error:", error);
         }
     };
     useEffect(() => {
