@@ -50,8 +50,9 @@ const Header = () => {
             </div>
             {user && (
                 <div>
+                    <button type="button" className="btn btn-success">Success</button>
                     <img
-                        className="header__body__loggedin__profile__icon"
+                        className="header__body__loggedin__profile__icon ms-3"
                         src={user?.photoURL}
                         alt="Profile Icon"
                     />
