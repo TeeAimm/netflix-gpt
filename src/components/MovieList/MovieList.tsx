@@ -13,7 +13,7 @@ const MovieList = ({ title, movies }: props) => {
     return (
         <div className='movie__list'>
             <div className='movie__list__title'>
-                {title}
+                <span>{title}</span>
             </div>
             <div className='movie__list__card'>
                 {movies?.map(movie => <MovieCard key={movie.id} posterPath={movie?.poster_path} />)}

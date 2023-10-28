@@ -1,4 +1,3 @@
-import React from 'react'
 import './MainContainer.scss'
 import { useSelector } from 'react-redux'
 import { RootState } from 'store/appStore'
@@ -15,7 +14,7 @@ const MainContainer = () => {
     const { original_title, overview, id } = mainMovie;
 
     return (
-        <div>
+        <div className='main__container'>
             <VideoBackground movieId={id} />
             <VideoTitle title={original_title} overview={overview} />
         </div>

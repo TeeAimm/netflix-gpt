@@ -1,5 +1,6 @@
 export const profilePhoto =
-    "https://avatars.githubusercontent.com/u/26965110?v=4";
+    "https://occ-0-3777-2186.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABY5cwIbM7shRfcXmfQg98cqMqiZZ8sReZnj4y_keCAHeXmG_SoqLD8SXYistPtesdqIjcsGE-tHO8RR92n7NyxZpqcFS80YfbRFz.png?r=229";
+// "https://avatars.githubusercontent.com/u/26965110?v=4";
 
 export const API_OPTIONS = {
     method: "GET",

@@ -1,6 +1,9 @@
 .header__body__loggedin {
     padding: 7px 60px;
-    background: rgb(20, 20, 20);
+    background: linear-gradient(to bottom, black 60%, transparent 100%);
+    position: fixed;
+    width: 100%;
+    z-index: 99;
     &__img {
         width: 130px;
     }
