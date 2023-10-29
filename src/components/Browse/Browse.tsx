@@ -6,9 +6,12 @@ import SecondaryContainer from 'components/SecondaryContainer/SecondaryContainer
 import usePopularMovies from 'hooks/usePopularMovies'
 import useTopRatedMovies from 'hooks/useTopRatedMovies'
 import useUpcomingMovies from 'hooks/useUpcomingMovies'
-import GptSearch from 'components/GptSearch/GptSearch'
+import GptSearchPage from 'components/GptSearchPage/GptSearchPage'
+import { useSelector } from 'react-redux'
+import { RootState } from 'store/appStore'
 
 const Browse = () => {
+    const toggleGptSearch = useSelector((state: RootState) => state.gpt.showGptSearch)
     useNowPlayingMovies()
     usePopularMovies()
     useTopRatedMovies()
@@ -16,9 +19,10 @@ const Browse = () => {
     return (
         <div className='browse__body'>
             <Header />
-            <GptSearch />
-            <MainContainer />
-            <SecondaryContainer />
+            {toggleGptSearch ? <GptSearchPage /> : <>
+                <MainContainer />
+                <SecondaryContainer />
+            </>}
         </div>
     )
 }

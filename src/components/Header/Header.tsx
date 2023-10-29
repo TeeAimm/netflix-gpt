@@ -8,6 +8,9 @@ import { addUser, removeUser } from "store/userSlice";
 import { useNavigate } from "react-router-dom";
 import { RootState } from "store/appStore";
 import { useEffect } from "react";
+import { toggleGptSearchView } from "store/gptSlice";
+import { SUPPORTED_LANGUAGES } from "utils/constants";
+import { changeLanguage } from "store/configSlice";
 
 const Header = () => {
     const dispatch = useDispatch();
@@ -24,6 +27,14 @@ const Header = () => {
                 navigate("/error");
             });
     };
+
+    const handleGptSearchBtn = () => {
+        dispatch(toggleGptSearchView())
+    }
+
+    const handleLanguageChange = (event: React.ChangeEvent<HTMLSelectElement>): void => {
+        dispatch(changeLanguage(event.target.value))
+    }
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -49,8 +60,11 @@ const Header = () => {
                 />
             </div>
             {user && (
-                <div>
-                    <button type="button" className="btn btn-success">Success</button>
+                <div className="d-flex align-items-center">
+                    <select onChange={handleLanguageChange} className="form-select w-auto me-3" aria-label="Select language">
+                        {SUPPORTED_LANGUAGES?.map(item => <option key={item?.identifier} value={item?.identifier}>{item?.name}</option>)}
+                    </select>
+                    <button type="button" className="btn btn-success" onClick={handleGptSearchBtn}>Search</button>
                     <img
                         className="header__body__loggedin__profile__icon ms-3"
                         src={user?.photoURL}
